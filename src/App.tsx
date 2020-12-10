@@ -1,58 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { FunctionComponent } from 'react';
+import { Search } from './components/search/Search';
+import { Results } from './components/results/Results';
+import { SearchEngine } from './utils/constants';
+import {
+  selectSearchEngine,
+  selectQuery,
+} from './components/search/searchSlice';
+import { useSelector } from 'react-redux';
 import './App.css';
 
-function App() {
+const App: FunctionComponent = () => {
+  const query = useSelector(selectQuery);
+  const searchEngine = useSelector(selectSearchEngine);
+  const showGCS =
+    searchEngine === SearchEngine.Google || searchEngine === SearchEngine.Both;
+  const showBCS =
+    searchEngine === SearchEngine.Bing || searchEngine === SearchEngine.Both;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className='App'>
+      <Search />
+      {showGCS && <Results searchEngine={SearchEngine.Google} query={query} />}
+      {showBCS && <Results searchEngine={SearchEngine.Bing} query={query} />}
     </div>
   );
-}
+};
 
 export default App;

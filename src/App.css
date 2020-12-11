@@ -8,16 +8,13 @@
   flex-wrap: wrap;
 }
 
-.results, .loading, .error {
-  width: 480px;
-}
-
-.error {
-  color: 'red'
-}
-
-.loading {
-  color: 'orange'
+a,
+.title {
+  display: block;
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 select,
@@ -36,12 +33,4 @@ button {
   outline: none;
   text-decoration: none;
   cursor: pointer;
-}
-
-a {
-  display: block;
-  max-width: 480px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

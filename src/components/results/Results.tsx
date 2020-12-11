@@ -14,17 +14,17 @@ export const Results: FunctionComponent<ResultsProps> = ({
 }) => {
   const [result, loading, error] = useSearch(query, searchEngine);
 
-  if (loading) return <div className='loading'>Loading {searchEngine} Results...</div>;
+  if (loading) return <div>Loading {searchEngine} Results...</div>;
 
-  if (error) return <div className='error'>{JSON.stringify(error)}</div>;
+  if (error) return <div>{JSON.stringify(error)}</div>;
 
   if (!result) return null;
 
   const parsedResults = parseResults(searchEngine, result);
 
   return (
-    <div className="results">
-      <h3>Results from {searchEngine}:</h3>
+    <div>
+      <h3 className='title'>Results from {searchEngine}:</h3>
       {parsedResults ? (
         <ul>
           {parsedResults.map((item) => (

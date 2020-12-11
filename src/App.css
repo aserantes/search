@@ -4,12 +4,20 @@
 
 .row {
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-input[select] {
-  background-color: green;
+.results, .loading, .error {
+  width: 480px;
+}
+
+.error {
+  color: 'red'
+}
+
+.loading {
+  color: 'orange'
 }
 
 select,
@@ -32,7 +40,7 @@ button {
 
 a {
   display: block;
-  max-width: 90vw;
+  max-width: 480px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

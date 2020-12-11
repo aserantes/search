@@ -20,8 +20,10 @@ const App: FunctionComponent = () => {
   return (
     <div className='App'>
       <Search />
-      {showGCS && <Results searchEngine={SearchEngine.Google} query={query} />}
-      {showBCS && <Results searchEngine={SearchEngine.Bing} query={query} />}
+      <section className='row'>
+        {showGCS && <Results searchEngine={SearchEngine.Google} query={query} />}
+        {showBCS && <Results searchEngine={SearchEngine.Bing} query={query} />}
+      </section>
     </div>
   );
 };

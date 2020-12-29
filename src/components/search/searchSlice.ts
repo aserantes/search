@@ -1,20 +1,18 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../../app/store";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from '../../app/store';
 
-interface SearchState {
+export interface SearchState {
   query: string;
   searchEngine: string;
-  shouldSearch: boolean;
 }
 
 const initialState: SearchState = {
-  query: "",
-  searchEngine: "",
-  shouldSearch: false,
+  query: '',
+  searchEngine: '',
 };
 
 export const searchSlice = createSlice({
-  name: "search",
+  name: 'search',
   initialState,
   reducers: {
     setQuery: (state, action: PayloadAction<string>) => {
@@ -23,22 +21,12 @@ export const searchSlice = createSlice({
     setSearchEngine: (state, action: PayloadAction<string>) => {
       state.searchEngine = action.payload;
     },
-    setShouldSearch: (state, action: PayloadAction<boolean>) => {
-      state.shouldSearch = action.payload;
-    },
   },
 });
 
-export const {
-  setQuery,
-  setSearchEngine,
-  setShouldSearch,
-} = searchSlice.actions;
+export const { setQuery, setSearchEngine } = searchSlice.actions;
 
-export const selectSearchEngine = (state: RootState) =>
-  state.search.searchEngine;
-export const selectShouldSearch = (state: RootState) =>
-  state.search.shouldSearch;
-export const selectQuery = (state: RootState) => state.search.query;
+export const getSearchEngine = (state: RootState) => state.search.searchEngine;
+export const getQuery = (state: RootState) => state.search.query;
 
 export default searchSlice.reducer;

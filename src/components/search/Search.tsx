@@ -4,13 +4,13 @@ import { SearchEngine } from '../../utils/constants';
 import {
   setSearchEngine,
   setQuery,
-  selectSearchEngine,
-  selectQuery,
+  getSearchEngine,
+  getQuery,
 } from './searchSlice';
 
 export function Search() {
-  const searchEngine = useSelector(selectSearchEngine);
-  const query = useSelector(selectQuery);
+  const searchEngine = useSelector(getSearchEngine);
+  const query = useSelector(getQuery);
 
   const dispatch = useDispatch();
   const [inputText, setInputText] = useState('');
@@ -38,17 +38,17 @@ export function Search() {
         className='input'
         value={inputText}
         onChange={handleTextInputChange}
-        aria-label='set search query text'
+        aria-label='searchTermTextInput'
       />
       <select
         value={selectValue}
         onChange={handleSelectChange}
-        aria-label='search engine to use'>
+        aria-label='searchEngineSelect'>
         <option value={SearchEngine.Google}>{SearchEngine.Google}</option>
         <option value={SearchEngine.Bing}>{SearchEngine.Bing}</option>
         <option value={SearchEngine.Both}>{SearchEngine.Both}</option>
       </select>
-      <button onClick={handleSearchClick} aria-label='execute search'>
+      <button onClick={handleSearchClick} aria-label='searchSubmit'>
         Search
       </button>
     </section>

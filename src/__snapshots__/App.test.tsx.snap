@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders App correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -13,13 +13,13 @@ Object {
           class="row"
         >
           <input
-            aria-label="set search query text"
+            aria-label="searchTermTextInput"
             class="input"
             type="text"
             value=""
           />
           <select
-            aria-label="search engine to use"
+            aria-label="searchEngineSelect"
           >
             <option
               value="Google"
@@ -38,11 +38,14 @@ Object {
             </option>
           </select>
           <button
-            aria-label="execute search"
+            aria-label="searchSubmit"
           >
             Search
           </button>
         </section>
+        <section
+          class="row"
+        />
       </div>
     </div>
   </body>,
@@ -55,13 +58,13 @@ Object {
         class="row"
       >
         <input
-          aria-label="set search query text"
+          aria-label="searchTermTextInput"
           class="input"
           type="text"
           value=""
         />
         <select
-          aria-label="search engine to use"
+          aria-label="searchEngineSelect"
         >
           <option
             value="Google"
@@ -80,11 +83,14 @@ Object {
           </option>
         </select>
         <button
-          aria-label="execute search"
+          aria-label="searchSubmit"
         >
           Search
         </button>
       </section>
+      <section
+        class="row"
+      />
     </div>
   </div>,
   "debug": [Function],

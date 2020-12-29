@@ -1,6 +1,6 @@
 ## Search
 
-_(a dual search minimalist demo app to showcase react skills)_
+_A frontend only dual search minimalist demo app to showcase react skills (Google / Bing). Originally created for a tech challenge (24Hs time restriction). Made public to showcase my react skills as part of portfolio._
 
 ### > [Link to online production build](https://search-ihnqnj86k.vercel.app/) <
 

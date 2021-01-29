@@ -2,7 +2,7 @@
 
 _A frontend only dual search minimalist demo app to showcase react skills (Google / Bing). Originally created for a tech challenge (24Hs time restriction). Made public to showcase my react skills as part of portfolio._
 
-### > [Link to online production build](https://search-ihnqnj86k.vercel.app/) <
+### > [Link to online production build](https://search.aserantes.vercel.app/) <
 
 ### Stack used
 
@@ -22,7 +22,7 @@ _A frontend only dual search minimalist demo app to showcase react skills (Googl
 - `yarn start`
 - You will need to create a .env file at project root with your own credentials for [Google Search API](https://customsearch.googleapis.com/customsearch/v1) and [Bing Search API](https://api.bing.microsoft.com/v7.0/custom/search) (Use the same syntax as in file `.env.example`).
 
-### > [Link to online production build](https://search-ihnqnj86k.vercel.app/) <
+### > [Link to online production build](https://search.aserantes.vercel.app/) <
 
 **_Alejandro Serantes_**
 

@@ -35,7 +35,7 @@ export const Results: FunctionComponent<ResultsProps> = ({
           ))}
         </ul>
       ) : (
-        <strong>None.</strong>
+        <strong>No Results.</strong>
       )}
     </div>
   );

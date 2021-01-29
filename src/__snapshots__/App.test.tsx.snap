@@ -12,6 +12,55 @@ Object {
           aria-label="search components"
           class="row"
         >
+          <form>
+            <input
+              aria-label="searchTermTextInput"
+              class="input"
+              type="text"
+              value=""
+            />
+            <select
+              aria-label="searchEngineSelect"
+            >
+              <option
+                value="Google"
+              >
+                Google
+              </option>
+              <option
+                value="Bing"
+              >
+                Bing
+              </option>
+              <option
+                value="Both"
+              >
+                Both
+              </option>
+            </select>
+            <button
+              aria-label="searchSubmit"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </section>
+        <section
+          class="row"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <section
+        aria-label="search components"
+        class="row"
+      >
+        <form>
           <input
             aria-label="searchTermTextInput"
             class="input"
@@ -39,54 +88,11 @@ Object {
           </select>
           <button
             aria-label="searchSubmit"
+            type="submit"
           >
             Search
           </button>
-        </section>
-        <section
-          class="row"
-        />
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="App"
-    >
-      <section
-        aria-label="search components"
-        class="row"
-      >
-        <input
-          aria-label="searchTermTextInput"
-          class="input"
-          type="text"
-          value=""
-        />
-        <select
-          aria-label="searchEngineSelect"
-        >
-          <option
-            value="Google"
-          >
-            Google
-          </option>
-          <option
-            value="Bing"
-          >
-            Bing
-          </option>
-          <option
-            value="Both"
-          >
-            Both
-          </option>
-        </select>
-        <button
-          aria-label="searchSubmit"
-        >
-          Search
-        </button>
+        </form>
       </section>
       <section
         class="row"

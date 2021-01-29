@@ -10,7 +10,10 @@ export function useSearch(query: string, searchEngine: SearchEngine) {
   const { url, headers } = getReq(query, searchEngine);
 
   useEffect(() => {
-    if (!query) return;
+    if (!query) {
+      setResult('');
+      return;
+    }
     setLoading(true);
     axios
       .get(url, headers)
@@ -20,7 +23,7 @@ export function useSearch(query: string, searchEngine: SearchEngine) {
       })
       .catch((error) => {
         setLoading(false);
-        setError(error.response?.data || error.message);
+        setError(error.response?.data.error.message || error.message);
       });
 
     return () => {};
